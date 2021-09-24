@@ -1,0 +1,31 @@
+plugins {
+	id 'org.springframework.boot' version '2.4.10'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'dev.d3athwarrior'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.security.kerberos:spring-security-kerberos-web:1.0.1.RELEASE'
+	implementation 'org.springframework.security.kerberos:spring-security-kerberos-core:1.0.1.RELEASE'
+	implementation 'org.springframework.security.kerberos:spring-security-kerberos-client:1.0.1.RELEASE'
+	implementation 'org.springframework.boot:spring-boot-starter-websocket'
+	implementation 'org.springframework:spring-messaging'
+	implementation 'org.springframework.security:spring-security-messaging'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.security:spring-security-test'
+}
+
+test {
+	useJUnitPlatform()
+}
